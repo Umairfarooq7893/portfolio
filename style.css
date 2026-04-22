@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  position: sticky;
+  top: 0;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  color: #38bdf8;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+section {
+  padding: 80px 60px;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 80px;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero h2 {
+  font-size: 45px;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(56,189,248,0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
