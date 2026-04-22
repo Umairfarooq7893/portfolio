@@ -107,10 +107,15 @@ section {
   background: rgba(56,189,248,0.1);
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
+.card a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 @keyframes fadeIn {
