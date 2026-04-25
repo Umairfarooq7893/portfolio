@@ -271,6 +271,8 @@ section h2::after {
 .hero-image img {
   width: 100%;
   max-width: 400px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(255, 165, 0, 0.2);
   animation: imageFloat 4s ease-in-out infinite;
