@@ -12,6 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Scroll animation for cards and service cards
 const cards = document.querySelectorAll('.card');
 const serviceCards = document.querySelectorAll('.service-card');
+const galleryItems = document.querySelectorAll('.gallery-item');
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -50px 0px'
@@ -30,6 +31,7 @@ const observer = new IntersectionObserver((entries) => {
 
 cards.forEach(card => observer.observe(card));
 serviceCards.forEach(card => observer.observe(card));
+galleryItems.forEach(item => observer.observe(item));
 
 // Add scroll animation to header
 let lastScrollTop = 0;
